@@ -1,0 +1,29 @@
+.logotype {
+    display: block;
+    margin-right: 85px;
+}
+.logo {
+    display: inline-block ;
+
+    color: $accent-color;
+    text-decoration: none;
+
+    font-family: $font-logo, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 1.2;
+}
+.logo-top {
+    color: $title-text-color; 
+    margin-left: 7px;
+}
+
+.logotype.footer {
+    margin-right: 0;
+    margin-bottom: 20px;
+}
+
+.logo-bottom {
+    color: $white-color;
+}
