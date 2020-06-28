@@ -1,14 +1,14 @@
 // Header 
 
 .container.main-container {
-    display: flex;
+    // display: flex;
     align-items: center;
     padding-top: 0;
     padding-bottom: 0;
 }
 // Site-nav 
 .site-nav {
-    display: flex;
+    // display: flex;
 }
 
 .site-nav .item:not(:last-child) {
@@ -53,7 +53,7 @@
 }
 
 .contact-info {
-    display: flex;
+    // display: flex;
     margin-left: auto;
     align-items: baseline;
 }
