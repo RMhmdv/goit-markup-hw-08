@@ -1,0 +1,16 @@
+// Section 
+
+.section-title {
+    margin-top: 0;
+    // margin-bottom: 50px;
+    
+    color: $title-text-color;
+
+    font-family: $font-main, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+    letter-spacing: 0.03em;
+}
