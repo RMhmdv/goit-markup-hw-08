@@ -1,6 +1,10 @@
-// Work 
+.section.doing {
+    position: fixed;
+    opacity: 0;
+    pointer-events: none;
+}
 .work-list {
-    display: flex;
+//     // display: flex;
 
     & > li.item {
         display: block;

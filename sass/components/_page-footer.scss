@@ -1,8 +1,8 @@
 /* Footer */
 
 .container.footer {
-    display: flex;
-    align-items: baseline;
+    // display: flex;
+    // align-items: baseline;
     padding-top: 60px;
     padding-bottom: 60px;
 }
@@ -46,8 +46,8 @@
 }
 .join {
     
-    display: block;
-    margin-bottom: 20px;
+    // display: block;
+    // margin-bottom: 20px;
 
     font-family: $font-main;
     font-style: normal;
@@ -73,33 +73,33 @@
     background-color: $footer-bg-color;
 
 }
-.mailing {
-    margin-left: 94px;
-}
+// .mailing {
+//     // margin-left: 94px;
+// }
 
-.mailing-form {
+// .mailing-form {
 
-    position: relative;
-    display: flex;
-}
+//     // position: relative;
+//     // display: flex;
+// }
 
 .btn.submit {
     display: inline-flex;
     font-weight: 900;
     letter-spacing: 0.06em;
-    margin-left: 12px;
+    margin-right: auto;
+    margin-left: auto;
 }
 .submit-icon {
     display: block;
     width: 24px;
     height: 24px;
-    margin-left: 10px;
     fill: currentColor;
 }
 
-.social.footer {
-    justify-content: flex-start;
-}
+// .social.footer {
+//     // justify-content: flex-start;
+// }
 
 .social-link {
     background-color: $bg-link;
