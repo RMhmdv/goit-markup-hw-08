@@ -1,10 +1,11 @@
 .section {
     padding-top: 60px;
     padding-bottom: 60px;
+    // outline: 2px solid teal;
 }
 .section-title {
     margin-top: 0;
-    // margin-bottom: 50px;
+    margin-bottom: 30px;
     
     color: $title-text-color;
 
@@ -16,5 +17,3 @@
     text-align: center;
     letter-spacing: 0.03em;
 }
-
-

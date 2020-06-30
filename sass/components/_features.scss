@@ -1,21 +1,38 @@
-// Features 
+// .container.features {
+//     // border-bottom: 1px solid $border-color-main;
+// }
 
-.container.features {
-    border-bottom: 1px solid $border-color-main;
+.feature-list__item:not(:last-child) {
+    margin-bottom: 30px;
 }
 
-.feature-list {
-    // display: flex;
-    &__item:not(:last-child) {
+
+@media screen and (min-width: 768px) {
+    .feature-list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .feature-list__item {
+        display: inline-block;
+        width: 354px;
+        &:nth-last-child(-n + 2) {
+            margin-bottom: 30px;
+        } 
+        &:nth-last-child(2n + 1) {
+            margin-right: 30px;
+        }
+    }
+
+
+}
+
+@media screen and (min-width:1200px) {
+    .feature-list__item:not(:last-child) {
         margin-right: 30px;
     }
-    & p {
-        width: 270px;
-        height: 75px;
-        margin-top: 0;
-        margin-bottom: 0;
-    }
 }
+    
+
 
 .title {
     margin-top: 0;
@@ -29,16 +46,18 @@
     font-size: 14px;
     line-height: 1.2;
     text-transform: uppercase;
+    text-align: center;
 }
 .box {
     position: relative;
-    display: flex;
-    width: 270px;
-    height: 120px;
+    display: block;
+    // min-width: 270px;
+    // min-height: 120px;
     align-items: center;
     padding-top: 25px;
     padding-bottom: 25px;
     margin-bottom: 30px;
+    border-radius: 4px;
 
     background-color: $portfolio-bg;
 
@@ -46,6 +65,36 @@
 
     &:hover {
         background-color: $accent-color;
+    }
+    @media screen and (min-width:480px) and (max-width:768px) {
+        max-width: 450px; 
+      }
+      @media screen and (min-width:768px) and (max-width:1199px) {
+         max-width: 354px;
+      }
+      @media screen and (min-width:1200px) {
+          max-width: 270px;
+          
+      }
+  
+
+}
+
+.feature-list p {
+    margin-top: 0;
+    margin-bottom: 0;
+    display: inline-block;
+    width: 100%;
+    text-align: justify;
+    @media screen and (min-width:480px) and (max-width:768px) {
+      max-width: 450px; 
+    }
+    @media screen and (min-width:768px) and (max-width:1199px) {
+       max-width: 354px;
+    }
+    @media screen and (min-width:1200px) {
+        max-width: 270px;
+        
     }
 }
 
