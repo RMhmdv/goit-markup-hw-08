@@ -2,31 +2,57 @@
     background-color: $portfolio-bg;
 }
 
+.team-list .item {
+    margin-bottom: 30px;
+    
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        &:nth-last-child(-n + 2) {
+            margin-bottom: 30px;
+        } 
+        &:nth-child(2n + 1) {
+            margin-right: 30px;
+        }
+    }
+    @media screen and (min-width:1200px) {
+        & {
+            margin-right: 30px;
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+
+} 
+
 @media screen and (min-width: 768px) {
     .team-list {
         display: flex;
         flex-wrap: wrap;
     }
-
 }
 
-@media screen and (min-width: 768px) and (max-width: 1199px) {
+// @media screen and (min-width: 768px) and (max-width: 1199px) {
     
-    .team-list .item:nth-last-child(-n + 2) {
-        margin-bottom: 30px;
-    } 
-    .team-list .item:nth-last-child(2n + 1) {
-        margin-right: 30px;
-    }
+//     .team-list .item:nth-last-child(-n + 2) {
+//         margin-bottom: 30px;
+//     } 
+//     .team-list .item:nth-last-child(2n + 1) {
+//         margin-right: 30px;
+//     }
 
-}
+// }
 
-@media screen and (min-width:1200px) {
-    .team-list .item:not(:last-child) {
-        margin-right: 30px;
-    }
+// @media screen and (min-width:1200px) {
+//     .team-list .item:not(:last-child) {
+//         margin-right: 30px;
+//     }
     
-}
+// }
 
 .card {
     max-width: 100%;
