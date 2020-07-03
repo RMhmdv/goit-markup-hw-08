@@ -1,10 +1,11 @@
 .section.doing {
-    position: fixed;
-    opacity: 0;
-    pointer-events: none;
+    @media screen and (max-width: 1199px) {
+        display: none;
+    }
 }
 .work-list {
-//     // display: flex;
+    display: flex;
+    flex-wrap: wrap;
 
     & > li.item {
         display: block;
@@ -13,7 +14,6 @@
         margin-right: 30px;
     }
     & .title {
-
         position: absolute;
     
         width: 100%;
@@ -31,7 +31,6 @@
         line-height: 1.14;
         letter-spacing: 0.03em;
         text-align: center;
-        
     }
 }
 
@@ -40,4 +39,3 @@
     max-width: 370px;
     max-height: 294px;
 }
-
