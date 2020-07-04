@@ -5,8 +5,7 @@
 }
 .work-list {
     display: flex;
-    flex-wrap: wrap;
-
+            
     & > li.item {
         display: block;
     }
