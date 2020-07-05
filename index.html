@@ -9,7 +9,6 @@
 </head>
 <body>
     <header class="page-header">
-        
         <div class="container main-container">
             <div class="logotype">
                 <a href="./" class="logo">Web<span class="logo-top">Studio</span> </a>
@@ -45,17 +44,9 @@
                                 <use href="./images/sprite.svg#icon-phone"></use>
                             </svg> +38 096 111 11 11</a></li>          
                     </ul>
-    
                 </div>         
-
-
-    
             </div>
-              
-
         </div>
-
-
     </header>
     
     <main>
@@ -153,7 +144,7 @@
                             <div class="card-team">
                                 <h3 class="team-title">John Smith</h3>
                                 <p class="team-title position">Product Designer</p>
-                                <ul class="social">
+                                <ul class="socials_list">
                                     <li class="social-item">
                                         <a href="#" aria-label="Инстаграм" class="social-link"> 
                                             <svg class="social-icon">
@@ -189,7 +180,7 @@
                             <div class="card-team">
                                 <h3 class="team-title">Marta Stewart</h3>
                                 <p class="team-title position">Frontend Developer</p>
-                                <ul class="social">
+                                <ul class="socials_list">
                                     <li class="social-item">
                                         <a href="#" aria-label="Инстаграм" class="social-link"> 
                                             <svg class="social-icon">
@@ -225,7 +216,7 @@
                             <div class="card-team">
                                 <h3 class="team-title">Robert Jakis</h3>
                                 <p class="team-title position">Marketing</p>
-                                <ul class="social">
+                                <ul class="socials_list">
                                     <li class="social-item">
                                         <a href="#" aria-label="Инстаграм" class="social-link"> 
                                             <svg class="social-icon">
@@ -261,7 +252,7 @@
                             <div class="card-team">
                                 <h3 class="team-title">Martin Doe</h3>
                                 <p class="team-title position">UI Designer</p>
-                                <ul class="social">
+                                <ul class="socials_list">
                                     <li class="social-item">
                                         <a href="#" aria-label="Инстаграм" class="social-link"> 
                                             <svg class="social-icon">
@@ -416,19 +407,21 @@
 
     <footer class="page-footer">
 
-        <div class="container footer">
+        <div class="page-footer__container">
+                <div class="page-footer__address">
                     <address class="address">   
                         <div class="logotype footer">
                             <a href="./" class="logo">Web <span class="logo-bottom">Studio</span></a> 
                         </div>
-                        <p>г. Киев, бул. Леси Украинки, 26</p> 
+                        <p class="address__text">г. Киев, бул. Леси Украинки, 26</p> 
                         <a class="address-link" href="mailto:info@devstudio.com">info@devstudio.com</a> <br>
                         <a class="address-link" href="tel:+380961111111">+38 096 111 11 11</a>
                     </address>
+                </div>
         
-                <section class="net-footer">
+                <div class="net-footer">
                     <b class="join">присоединяйтесь</b>
-                    <ul class="social footer">
+                    <ul class="socials_list footer">
                         <li class="social-item">
                             <a href="#" aria-label="Инстаграм" class="social-link footer"> 
                                 <svg class="social-icon footer">
@@ -455,7 +448,7 @@
                         </li>
 
                     </ul>
-                </section>
+                </div>
               
                 <section class="mailing">
                     <b class="join">подпишитесь на рассылку</b>
@@ -473,6 +466,22 @@
         </div>   
 
     </footer>
+    <script>
+        (() => {
+          document
+            .querySelector('.js-speaker-form')
+            .addEventListener('submit', e => {
+              e.preventDefault();
+  
+              new FormData(e.currentTarget).forEach((value, name) =>
+                console.log(`${name}: ${value}`),
+              );
+  
+              e.currentTarget.reset();
+            });
+        })();
+      </script>
+  
 
     <script src="./js/menu.js"></script>
     <script src="./js/modal.js"></script>

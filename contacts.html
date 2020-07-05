@@ -10,35 +10,46 @@
 <body>
    
     <header class="page-header contacts">
-        
-        <nav class="container main-container">
-            <div class="logotype">
-                <a href="./" class="logo">Web<span class="logo-top">Studio</span> </a>
+
+            <div class="container main-container">
+                <div class="logotype">
+                    <a href="./" class="logo">Web<span class="logo-top">Studio</span> </a>
+                </div>
+                <button type="button" class="menu__button" 
+                aria-expanded="false"
+                aria-controls="page-header__menu"
+                data-menu-button>
+                <svg class="menu__button--icon" width="40" height="40" aria-label="Переключатель мобильного меню">
+                  <use class="menu__button--icon-close" href="./images/sprite.svg#icon-close"></use>
+                  <use class="menu__button--icon-menu" href="./images/sprite.svg#icon-menu"></use>
+                </svg>
+              </button>
+                <div class="page-header__menu" id="page-header__menu" data-menu>
+                    <div class="page-header__nav">
+                        <ul class="site-nav">   
+                            <li class="site-nav__item"><a href="./index.html" class="site-nav__link">Студия</a></li>
+                            <li class="site-nav__item"><a href="./portfolio.html" class="site-nav__link">Портфолио</a></li>
+                            <li class="site-nav__item"><a href="#" class="site-nav__link current">Контакты</a></li>
+                        </ul>
+                    </div>
+                    <div class="page-header__contacts">
+                        <ul class="contact-info__list">
+                            <li class="contact-info__item">
+                                <a href="mailto:info@devstudio.com" aria-label="Электронная почта" class="contact-info__link">
+                                <svg class="icon-letter"> 
+                                    <use href="./images/sprite.svg#icon-letter"></use>
+                                </svg>
+                                info@devstudio.com</a></li>
+                            <li class="contact-info__item">
+                                <a href="tel:+380961111111" aria-label="Номер тел" class="contact-info__link">
+                                 <svg class="icon-phone"> 
+                                    <use href="./images/sprite.svg#icon-phone"></use>
+                                </svg> +38 096 111 11 11</a></li>          
+                        </ul>
+                    </div>         
+                </div>
             </div>
-                
-            <ul class="site-nav">   
-                <li class="item"><a href="./index.html" class="link">Студия</a></li>
-                <li class="item"><a href="./portfolio.html" class="link">Портфолио</a></li>
-                <li class="item"><a href="#" class="link current">Контакты</a></li>
-            </ul>
-
-            <ul class="contact-info">
-                <li class="contact-info__item">
-                    <a href="mailto:info@devstudio.com" aria-label="Электронная почта" class="contact-info__link">
-                    <svg class="icon-letter"> 
-                        <use href="./images/sprite.svg#icon-letter"></use>
-                    </svg>
-                    info@devstudio.com</a></li>
-                <li class="contact-info__item">
-                    <a href="tel:+380961111111" aria-label="Номер тел" class="contact-info__link">
-                     <svg class="icon-phone"> 
-                        <use href="./images/sprite.svg#icon-phone"></use>
-                    </svg> +38 096 111 11 11</a></li>          
-            </ul>
-
-
-        </nav>
-
+    
 
     </header>
 
@@ -114,6 +125,25 @@
 
     </footer>
 
+    <script>
+        (() => {
+          document
+            .querySelector('.js-speaker-form')
+            .addEventListener('submit', e => {
+              e.preventDefault();
+  
+              new FormData(e.currentTarget).forEach((value, name) =>
+                console.log(`${name}: ${value}`),
+              );
+  
+              e.currentTarget.reset();
+            });
+        })();
+      </script>
+  
+
+    <script src="./js/menu.js"></script>
+    <script src="./js/modal.js"></script>
 
 </body>
 </html>
