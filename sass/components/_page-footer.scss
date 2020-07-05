@@ -93,7 +93,7 @@
       }
     }
   }
-  .mailing__form {
+  .mailing {
     text-align: center;
   
     @media screen and (min-width: 768px) {
@@ -107,14 +107,30 @@
     }
   }
   
-  .mailing {
+  .mailing__form {
     @media screen and (min-width: 768px) {
       display: inline-block;
     }
     @media screen and (min-width: 1200px) {
       display: flex;
+      position: relative;
     }
   }
+  .join {
+    
+    display: block;
+    margin-bottom: 20px;
+
+    font-family: $font-main;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1.14;
+
+    text-align: center;
+    text-transform: uppercase;
+}
+
   
   .mail-input {
     margin: 0;
@@ -154,7 +170,7 @@
   .btn.submit {
   
     display: inline-flex;
-    justify-content: flex-start;
+    justify-content: center;
   
     padding: 10px 29px;
 }
