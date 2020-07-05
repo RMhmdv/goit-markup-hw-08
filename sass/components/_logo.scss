@@ -1,7 +1,14 @@
 .logotype {
     display: inline-block;
-    // margin-right: 85px;
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        margin-right: 81px;
+    }
+    @media screen and (min-width: 1200px) {
+        margin-right: 85px;
+    }
 }
+
 .logo {
     display: inline-block ;
 
