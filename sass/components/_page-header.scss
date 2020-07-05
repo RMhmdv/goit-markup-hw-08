@@ -1,37 +1,24 @@
 .container.main-container {
-    padding-top: 22px;
-    padding-left: 15px;
-    padding-right: 23px;
-    padding-bottom: 22px;
+  
+  position: relative;
+  height: 60px;
+  padding: 0 15px;
 
-    @media screen and (max-width: 767px) {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media screen and (max-width: 767px) {
+    width: 480px;
+  }
+
+  @media screen and (min-width: 768px) {
+    position: static;
+    height: 80px;
+
+    justify-content: flex-start;
+  }
 }
-
-.menu {
-
-    position: fixed;
-    padding-top: 60px;
-    padding-bottom: 60px;
-    background: $white-color;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.16), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 4px 8px rgba(0, 0, 0, 0.04);
-
-
-    &.is-hidden {
-      opacity: 0;
-      pointer-events: none;
-    }
-
-    &.is-open {
-      display: block;
-      fill: $accent-color;
-    }
-
-}
-
 
 .menu-button {
     display: inline-flex;
@@ -56,3 +43,79 @@
   .menu-button.is-open .icon-menu {
     display: none;
   }
+  
+
+.menu__button {
+  display: inline-flex;
+  justify-self: flex-end;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+
+  .menu-icon {
+    display: inline-block;
+   
+    fill: currentColor;
+
+    &:hover,
+    &:focus {
+      fill: $accent-color;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.menu__button .icon-close {
+  display: none;
+
+  .menu__button.is-open & {
+    display: inline-block;
+  }
+}
+
+.menu__button.is-open .menu__button .icon-menu {
+  display: none;
+}
+
+.page-header__menu {
+  background-color: $white-color;
+
+  border-top: 1px solid $border-color-main;
+
+  padding: 60px 15px;
+  margin-left: auto;
+  margin-right: auto;
+
+  &.is-open {
+    display: inline-block;
+    text-align: center;
+    z-index: 3;
+  }
+
+  @media screen and (max-width: 767px) {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+  }
+
+  @media screen and (min-width: 768px) {
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+
+    width: 768px;
+    height: 80px;
+    padding: 0;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+  }
+}
